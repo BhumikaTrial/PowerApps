@@ -1,0 +1,11 @@
+{
+  "dataSources": {
+    "Equipment": {
+      "entitySetName": "cr2c7_equipments",
+      "logicalName": "cr2c7_equipment"
+    }
+  },
+  "instanceUrl": "https://org64db3a4d.crm.dynamics.com/",
+  "state": "Configured",
+  "webApiVersion": "v9.0"
+}
