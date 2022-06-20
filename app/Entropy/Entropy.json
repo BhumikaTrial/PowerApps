@@ -1,8 +1,11 @@
 {
   "ComponentIndexes": {},
-  "ControlUniqueIds": {},
+  "ControlUniqueIds": {
+    "App": 1
+  },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
+  "HeaderLastSavedDateTimeUTC": "06/20/2022 12:48:15",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": false,
@@ -15,8 +18,34 @@
   "OrderPcfTemplate": {},
   "OrderTemplate": {},
   "OrderXMLTemplate": {},
-  "PublishOrderIndices": {},
+  "PublishOrderIndices": {
+    "App": 0
+  },
   "ResourcesJsonIndices": {},
   "RuleScreenIdWithoutScreen": {},
-  "TemplateVersions": {}
+  "TemplateVersions": {},
+  "VolatileProperties": {
+    "AnalysisLoadTime": 0.3544621,
+    "ControlCount": {
+      "88579fd42d5044a08504f59bb01ad058": 1,
+      "afe5e61ef19f4573ab2d85701d2677fc": 1,
+      "button": 4,
+      "checkbox": 1,
+      "combobox": 1,
+      "dataCard": 2,
+      "fluidGrid": 2,
+      "gallery": 7,
+      "galleryTemplate": 7,
+      "group": 1,
+      "groupContainer": 4,
+      "icon": 1,
+      "label": 18,
+      "rectangle": 5,
+      "screen": 7,
+      "text": 7
+    },
+    "DeserializationLoadTime": 0.5890456,
+    "ErrorCount": 0
+  },
+  "WasLocalDatabaseReferencesEmpty": false
 }
