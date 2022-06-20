@@ -1,0 +1,74 @@
+"Screen5 As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+
+    RectQuickActionBar1 As rectangle:
+        Height: =88
+        Width: =Parent.Width
+        ZIndex: =1
+
+    LblAppName1 As label:
+        Align: =Align.Center
+        Height: =88
+        Text: ="[Title]"
+        Width: =Parent.Width
+        ZIndex: =2
+
+    Canvas1 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =Parent.Height/3//Parent.Height - Self.Y
+        Width: =Parent.Width
+        Y: =RectQuickActionBar1.Y + RectQuickActionBar1.Height
+        ZIndex: =3
+
+        DataCard1 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =Parent.Height-100
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Gallery6_2 As gallery.galleryVertical:
+                Height: =CountRows(Gallery6_2.AllItems)*Label9_2.Height+50
+                Items: =DD
+                Layout: =Layout.Vertical
+                TemplateSize: =Label9_2.Height//If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+                X: =40
+                Y: =40
+                ZIndex: =1
+
+                Label9_2 As label:
+                    Height: =75
+                    OnSelect: =Select(Parent)
+                    Text: =ThisItem.Value
+                    Width: =275
+                    X: =40
+                    ZIndex: =1
+
+            Label10 As label:
+                Text: ="Text"
+                X: =60
+                Y: =Gallery6_2.Y+Gallery6_2.Height
+                ZIndex: =2
+
+    Button1_3 As button:
+        OnSelect: |-
+            =/*ClearCollect(DD,{Value:"All"});//main collection
+            ClearCollect(options,Choices(Equipment.StatusCode));//chioces column in table
+            ForAll(options,Collect(DD,{Value:Text(ThisRecord.Value)}));*/
+            Collect(DD,{Value:"All"});
+            Patch(DD,Defaults(DD),{Value:TextInput2.Text})
+        Text: ="Button"
+        X: =159
+        Y: =1175
+        ZIndex: =4
+
+    TextInput2 As text:
+        Default: ="Text input"
+        X: =410
+        Y: =1175
+        ZIndex: =5
+

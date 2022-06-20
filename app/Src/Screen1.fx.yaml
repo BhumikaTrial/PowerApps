@@ -1,0 +1,54 @@
+Screen1 As screen:
+
+    Container4 As groupContainer.verticalAutoLayoutContainer:
+        Height: =595
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        Width: =680
+        X: =40
+        Y: =40
+        ZIndex: =2
+
+        Gallery6_3 As gallery.galleryVertical:
+            Height: =CountRows(Gallery6_3.AllItems)*Label9_3.Height
+            Items: =DD
+            Layout: =Layout.Vertical
+            LayoutMinHeight: =287
+            LayoutMinWidth: =320
+            TemplateSize: =Label9_3.Height//If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+            X: =40
+            Y: =40
+            ZIndex: =1
+
+            Label9_3 As label:
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.Value
+                Width: =275
+                X: =40
+                ZIndex: =1
+
+        Label10_1 As label:
+            Text: ="Text"
+            X: =20
+            Y: =Gallery6_3.Y+Gallery6_3.Height
+            ZIndex: =2
+
+    Button1_2 As button:
+        OnSelect: |-
+            =/*ClearCollect(DD,{Value:"All"});//main collection
+            ClearCollect(options,Choices(Equipment.StatusCode));//chioces column in table
+            ForAll(options,Collect(DD,{Value:Text(ThisRecord.Value)}));*/
+            Collect(DD,{Value:"All"});
+            Patch(DD,Defaults(DD),{Value:TextInput3.Text})
+        Text: ="Button"
+        X: =159
+        Y: =1175
+        ZIndex: =3
+
+    TextInput3 As text:
+        Default: ="Text input"
+        X: =400
+        Y: =1175
+        ZIndex: =4
+

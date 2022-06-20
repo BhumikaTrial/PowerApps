@@ -1,0 +1,150 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr2c7_equipments",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr2c7_equipment",
+    "MaxGetRowsCount": 500,
+    "Name": "Equipment",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "{Attachments}": "Attachments",
+      "cr2c7_description": "Description",
+      "cr2c7_equipment_Annotations": "Notes",
+      "cr2c7_equipment_AsyncOperations": "System Jobs",
+      "cr2c7_equipment_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr2c7_equipment_DuplicateBaseRecord": "Duplicate Records (cr2c7_equipment_DuplicateBaseRecord)",
+      "cr2c7_equipment_DuplicateMatchingRecord": "Duplicate Records (cr2c7_equipment_DuplicateMatchingRecord)",
+      "cr2c7_equipment_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr2c7_equipment_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr2c7_equipment_ProcessSession": "Process Sessions",
+      "cr2c7_equipment_SyncErrors": "Sync Errors",
+      "cr2c7_equipmentid": "Equipment",
+      "cr2c7_EquipmentOrder_Equipment_cr2c7_Equi": "Equipment Orders",
+      "cr2c7_equipmenttype": "Equipment type",
+      "cr2c7_modelnumber": "Model Number",
+      "cr2c7_name": "Name",
+      "cr2c7_price": "Price",
+      "cr2c7_price_base": "Price (Base)",
+      "cr2c7_statuscode": "StatusCode",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "exchangerate": "Exchange Rate",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "transactioncurrencyid": "Currency",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Equipment",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Equipment (Views)",
+    "Name": "_cr2c7_equipment_views",
+    "RelatedEntityName": "Equipment",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "2f026747-3744-430d-859d-7458f2322496": "Equipment Lookup View",
+      "c13d92e4-8fca-451f-8948-20e02713ff9b": "Equipment Advanced Find View",
+      "c779493b-692c-4d3a-a836-671c7820c225": "Equipment Associated View",
+      "d2e03da4-adad-41b9-8eb5-8bc81d396ce4": "Active Equipment",
+      "de51a819-859e-4a5c-be94-5a9822fdb117": "Inactive Equipment"
+    }
+  },
+  {
+    "DisplayName": "Status (Equipment)",
+    "Name": "cr2c7_equipment_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Equipment"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Equipment",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Equipment)",
+    "Name": "cr2c7_equipment_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Equipment"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Equipment",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Equipment type",
+    "Name": "cr2c7_equipmenttype",
+    "OptionSetInfoNameMapping": {
+      "398460000": "Desk",
+      "398460001": "Chair",
+      "398460002": "Almirah"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cr2c7_equipmenttype",
+        "OptionSetReferenceEntityName": "Equipment"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cr2c7_equipmenttype",
+    "RelatedEntityName": "Equipment",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "StatusCode",
+    "Name": "cr2c7_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "New",
+      "2": "assigned",
+      "3": "Approved"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cr2c7_statuscode",
+        "OptionSetReferenceEntityName": "Equipment"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cr2c7_statuscode",
+    "RelatedEntityName": "Equipment",
+    "Type": "OptionSetInfo"
+  }
+]

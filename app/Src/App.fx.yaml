@@ -1,0 +1,5 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |-
+        =ClearCollect(Collec1,{id:1,MenuLabel:"s1",screen:Screen1},{id:2,MenuLabel:"s2",screen:Screen2})
+

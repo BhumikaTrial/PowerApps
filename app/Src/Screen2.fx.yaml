@@ -1,0 +1,61 @@
+Screen2 As screen:
+
+    ComboBox1 As combobox:
+        DisplayFields: =["Value"]
+        IsSearchable: =false
+        Items: =DD//Choices(Equipment.StatusCode)
+        SearchFields: =["Value"]
+        SearchItems: =[]
+        X: =40
+        Y: =40
+        ZIndex: =1
+
+    Button1 As button:
+        OnSelect: |-
+            =/*ClearCollect(DD,{Value:"All"});//main collection
+            ClearCollect(options,Choices(Equipment.StatusCode));//chioces column in table
+            ForAll(options,Collect(DD,{Value:Text(ThisRecord.Value)}));
+            Collect(DD,{Value:"All"});
+            Patch(DD,Defaults(DD),{Value:TextInput1.Text})*/
+            Clear(DD)
+        Text: ="Button"
+        X: =40
+        Y: =110
+        ZIndex: =2
+
+    TextInput1 As text:
+        Default: ="Text input"
+        X: =295
+        Y: =135
+        ZIndex: =3
+
+    Container6 As groupContainer.verticalAutoLayoutContainer:
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        X: =60
+        Y: =425
+        ZIndex: =4
+
+        Gallery7 As gallery.galleryVertical:
+            Height: =CountRows(Gallery7.AllItems)*Label11.Height
+            Items: =DD
+            Layout: =Layout.Vertical
+            LayoutMinHeight: =287
+            LayoutMinWidth: =320
+            ShowScrollbar: =false
+            TemplateSize: =Label11.Height//If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+            ZIndex: =1
+
+            Label11 As label:
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.Value
+                X: =40
+                Y: =40
+                ZIndex: =1
+
+        Label12 As label:
+            Text: ="Image"
+            Y: =Gallery7.Y+Gallery7.Height
+            ZIndex: =2
+
